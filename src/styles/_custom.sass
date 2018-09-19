@@ -1,0 +1,505 @@
+$color_cyan: #00b9cf
+$color_fuchsia: #ff4f64
+$color_orange: #ff7354
+$color_grass: #93cb71
+$color_new_blue: rgb(0,185,239)
+$color_bg_default: #eceff1
+$color_default: white
+
+$default_screen_height: 720px
+
+$offset_top_overlap_news: 350px
+$offset_top_overlap_news_sm: 600px
+$offset_top_overlap_history: 12vw
+$offset_top_overlap_history_md: 65vw
+
+$zindex-website-main-container-header: 10
+$zindex-website-main-block-news: 9
+$zindex-website-main-block-history: 8
+
+=centralizedFlexbox()
+  display: flex
+  align-items: center
+  justify-content: center
+=centralizeSelfAndJustifyContent()
+  align-self: center
+  justify-content: center
+=linkNoUnderline($color)
+  text-decoration: none
+  color: $color
+
+=exportStyles($styles)
+  @each $p, $v in $styles
+    #{$p}: $v
+
+// RWD utils
+=rwd-lg($fit, $fallback)
+  +exportStyles($fit)
+  @include media-breakpoint-down(md)
+    +exportStyles($fallback)
+
+=rwd-md($fit, $fallback)
+  +exportStyles($fit)
+  @include media-breakpoint-down(sm)
+    +exportStyles($fallback)
+
+=rwd-sm($fit, $fallback)
+  +exportStyles($fit)
+  @include media-breakpoint-down(xs)
+    +exportStyles($fallback)
+
+body
+  color: $color_default
+  background-color: $color_bg_default
+  font-family: "Futura-Medium"
+
+.website-main-container
+  position: static
+  z-index: auto
+  opacity: 1
+  isolation: auto
+
+.website-main-container-header
+  position: relative
+  z-index: $zindex-website-main-container-header
+  min-height: $default_screen_height
+  +rwd-md((min-height: 800px),(min-height: 1400px))
+  background: url('/img/bg1.png') no-repeat
+  background-size: cover
+  background-position: center
+  .nav-item
+    margin-left: 30px
+  .nav-link.white-paper
+    color: $color_new_blue
+  .nav-link.white-paper:hover
+    color: $color_new_blue
+  .navbar-brand
+    +rwd-lg((width: 300px),(width: 200px))
+    margin-left: auto
+
+#navbarNav
+  .menu-feature
+    &.dropdown:hover > .dropdown-menu
+      display: block
+
+    &.mobile
+      +rwd-lg((display: none),(display: block))
+      .submenu
+    &.desktop
+      +rwd-lg((display: block),(display: none))
+
+.website-main-block-header
+  margin: 40px 0 0 0
+
+.website-main-block-countdown
+  margin: 90px 0 0 0
+
+  .day
+    .card
+      background-color: $color_cyan
+    .countdown-title
+      color: $color_cyan
+  .hour
+    .card
+      background-color: $color_fuchsia
+    .countdown-title
+      color: $color_fuchsia
+  .minute
+    .card
+      background-color: $color_orange
+    .countdown-title
+      color: $color_orange
+  .second
+    .card
+      background-color: $color_grass
+    .countdown-title
+      color: $color_grass
+
+  .item-info
+    .card
+      text-align: center
+      border-radius: 10px
+      min-height: 200px
+      .card-text
+        font-size: 9rem
+        margin: auto
+        color: #fff
+        text-shadow: 0 0 33px #ffffff
+    .countdown-title
+      text-align: center
+      margin-top: 20px
+      font-size: 1.5rem
+
+.website-main-block-video-pmp
+  margin: auto
+  margin-top: calc(50vh - 350px)
+  text-align: center
+  .title
+    color: #fff
+    font-size: 3.2rem
+  .title-img
+    width: 40%
+    right: 0
+  .intro-text
+    text-align: right
+  img.slogan
+    position: absolute
+    left: 0
+    // +rwd-md((bottom: (-$offset_top_overlap_news)/2),(bottom: (-$offset_top_overlap_news_sm)/2))
+    transform: translateY(50%)
+  .A
+    // right: -10vw
+    max-height: 50vh
+    +rwd-md((transform: translate(50%, 10%)),(transform: translate(40%, 10%)))
+    +rwd-sm((transform: translate(40%, 10%)),(transform: translate(30%, 10%)))
+
+.website-main-block-features-below-logo-with-slogan
+  margin: 0
+  .item01
+    background-color: $color_cyan
+  .item02
+    background-color: $color_fuchsia
+  .item03
+    background-color: $color_orange
+  .item04
+    background-color: $color_grass
+  .item-info
+    text-align: center
+    +centralizedFlexbox()
+    padding: 7vw
+    color: #fff
+    font-size: 2rem
+
+.website-main-container-content
+  margin: 0
+  +rwd-md((margin-top: -$offset_top_overlap_news),(margin-top: -$offset_top_overlap_news_sm))
+  text-align: center
+  // background-color: white
+
+.website-main-block-history
+  background: $color_new_blue
+  color: white
+  margin: 0
+
+  z-index: $zindex-website-main-block-history
+  +rwd-lg((margin-top: -$offset_top_overlap_history),(margin-top: -$offset_top_overlap_history_md))
+  +rwd-lg((padding-top: $offset_top_overlap_history),(padding-top: $offset_top_overlap_history_md))
+  min-height: $default_screen_height
+  +rwd-lg((min-height: 70vw),(min-height: 220vw))
+
+  background: url('/img/bg3.png') no-repeat
+  background-size: cover
+  background-position: center
+
+  img
+    &.mobile
+      +rwd-lg((display: none),(display: block))
+      .submenu
+    &.desktop
+      +rwd-lg((display: block),(display: none))
+
+  text-align: center
+  .card
+    height: 100%
+    padding: 30px 0 30px 0
+    border: 0px
+    .card-title
+      font-size: 1.5rem
+      margin-bottom: 1rem
+    p
+      text-align: justify
+  .block-title
+    margin-top: auto
+    margin-bottom: 0
+    +centralizeSelfAndJustifyContent()
+    .item-title
+      span
+        color: $color_new_blue
+    h6
+      line-height: 2
+  .block-center
+    margin: auto
+    margin-left: 80px
+    margin-right: 80px
+    +centralizeSelfAndJustifyContent()
+  .img-item
+    margin: auto
+
+.website-main-block-features-certification-eco
+  min-height: $default_screen_height
+  // background: url('/img/09.jpg') no-repeat
+  background: white
+  background-size: cover
+  color: black
+  .card
+    height: 100%
+    padding: 30px 0 30px 0
+    border: 0px
+    color: black
+    .card-title
+      font-size: 1.5rem
+    p
+      text-align: justify
+  .block-title
+    margin-top: 90px
+    margin-bottom: 0
+    +centralizeSelfAndJustifyContent()
+    .item-title
+      span
+        color: $color_new_blue
+    p
+      line-height: 1.8
+      margin-bottom: 3rem
+  .block-center
+    margin: auto
+    margin-left: 80px
+    margin-right: 80px
+    +centralizeSelfAndJustifyContent()
+  .img-item
+    margin: auto
+
+.website-main-block-features-trading-eco
+  background: $color_new_blue
+  color: white
+  margin: 0
+  padding-bottom: 50px
+  min-height: 770px
+  .block-title
+    margin-top: 90px
+    margin-bottom: 0
+    +centralizeSelfAndJustifyContent()
+    .item-title
+      span
+        color: $color_new_blue
+    h6
+      line-height: 2rem
+      max-width: 800px
+      margin-bottom: 40px
+  .block-center
+    .card
+      color: black
+      height: 100%
+      .card-body
+        padding: 2.5rem 1.25rem
+      .card-title
+        font-size: 1.5rem
+        margin-bottom: 1rem
+      .card-text
+        min-height: 95px
+        text-align: justify
+
+.website-main-block-features-sns-eco
+  margin: 0
+  min-height: $default_screen_height - 120
+  background: url('/img/10.jpg') no-repeat
+  background-size: cover
+  color: #fff
+  .block-title
+    margin-top: 130px
+    margin-bottom: 0
+    +centralizeSelfAndJustifyContent()
+    .item-title
+      span
+        color: $color_new_blue
+    h6
+      line-height: 2rem
+      color: white
+      text-align: left
+      max-width: 800px
+      margin-bottom: 40px
+  .card-sns
+    margin-top: 30px
+  .item-left
+    background: url('/img/02.jpg') no-repeat
+    background-size: cover
+    color: white
+  .item-right
+    background: white
+    color: black
+
+.website-main-block-news
+  +rwd-md((padding-top: $offset_top_overlap_news),(padding-top: $offset_top_overlap_news_sm))
+  z-index: $zindex-website-main-block-news
+  position: relative
+  margin: 0
+  min-height: $default_screen_height
+  +rwd-md((min-height: 60vw),(min-height: 220vw))
+  background: url('/img/bg2 (1).png') no-repeat
+  background-size: cover
+  // background-position: center
+  +rwd-md((background-position: center),(background-position: 0% center))
+  .block-title
+    margin-top: 60px
+    margin-bottom: 0
+    +centralizeSelfAndJustifyContent()
+    .item-title
+      span
+        color: $color_new_blue
+    h6, h5, h4
+      line-height: 2rem
+      max-width: 720px
+      margin-bottom: 40px
+      span
+        display: inline-block
+        color: $color_new_blue
+      ol
+        margin: auto
+        max-width: 400px
+      li
+        line-height: 4rem
+  .block-center
+    width: 100%
+  .item-info
+    text-align: center
+    +centralizedFlexbox()
+    padding: 7vw
+  .item-left
+    background: url('/img/02.jpg') no-repeat
+    background-size: cover
+    color: white
+  .item-right
+    background: white
+  .card-title
+    margin-top: 30px
+  .card-body
+    padding: 0
+
+.website-main-block-about-platform
+  margin: 0
+  min-height: $default_screen_height
+  background: url('/img/12.jpg') no-repeat
+  background-size: cover
+  color: #fff
+  & > .container
+    align-items: center
+    justify-content: center
+  .item-info
+    width: 100%
+    text-align: left
+  .item-title
+    span
+      color: $color_orange
+  .item-text
+    margin-bottom: 1.5rem
+  #accordion
+    .btn-link
+      +linkNoUnderline(#fff)
+    .card, .card-body
+      background-color: rgba(0, 0, 0, .3)
+    .card-header
+      background-color: rgba(0, 0, 0, .6)
+    .collapse
+      background-color: rgba(0, 0, 0, .0)
+
+.website-main-block-architecture
+  min-height: 770px
+  background: white
+  .block-title
+    margin-top: 90px
+    margin-bottom: 0
+    +centralizeSelfAndJustifyContent()
+    .item-title
+      span
+        color: $color_new_blue
+    .item-text
+      line-height: 2
+
+.website-main-block-timeline
+  padding-bottom: 20px
+  .block-title
+    margin-top: 90px
+    margin-bottom: 0
+    +centralizeSelfAndJustifyContent()
+    .item-title
+      span
+        color: $color_new_blue
+  .timeline-img
+    background-image: url("/img/roadmap.png")
+    background-size: 100%
+    background-repeat: no-repeat
+    width: 100%
+    height: 0
+    padding-top: 63.77%
+
+.website-main-block-token
+  background: lightgray
+  padding-bottom: 100px
+  .block-title
+    margin-top: 90px
+    margin-bottom: 0
+    +centralizeSelfAndJustifyContent()
+    .item-title
+      span
+        color: $color_new_blue
+    .item-text
+      line-height: 2
+
+.website-main-block-about-team
+  background: $color_new_blue
+  color: white
+  margin: 0
+  min-height: $default_screen_height
+  .card
+    color: black
+    min-height: 100%
+    .card-title
+      color: $color_new_blue
+      min-height: 3rem
+    .card-body
+      text-align: justify
+  .block-title
+    min-width: 350px
+    margin-top: 90px
+    margin-bottom: 0
+    +centralizeSelfAndJustifyContent()
+    .item-title
+      span
+        color: white
+    .item-text
+      line-height: 2
+  .block-team
+    margin: 0
+    // padding: 50px
+  .item-people
+    min-height: 300px
+    padding: 30px
+    .item-portrait
+      +centralizedFlexbox()
+      height: 200px
+      width: 150px
+      margin: auto
+      border-radius: 5px
+    .item-name
+      margin-top: 10px
+      font-size: 1.5rem
+    .item-position
+      color: $color_orange
+    .item-desc
+      text-align: justify
+      padding-top: 10px
+
+.website-main-block-footer
+  margin: 0
+  min-height: 100px
+  // background: url('/img/02.jpg') no-repeat
+  background: black
+  background-size: cover
+  color: white
+  +centralizedFlexbox()
+  .block-copyright
+    justify-content: flex-start
+    align-self: flex-start
+  .block-logo
+    +centralizedFlexbox()
+    flex-direction: column
+    .img-item
+      align-self: flex-start
+      height: 60px
+      margin: auto 0px
+  .block-nav
+    +centralizedFlexbox()
+    flex-direction: column
+    nav
+      align-self: flex-end
+      a
+        +linkNoUnderline(#fff)

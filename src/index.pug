@@ -1,0 +1,335 @@
+doctype html
+head
+  meta(charset="utf-8")
+  title ADisON
+body
+  .website-main-container
+    .website-main-container-header
+      
+      .container
+        .row
+          .col-md.website-main-block-header
+            //- nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            nav.navbar.navbar-expand-lg.navbar-dark
+              button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+              #navbarNav.collapse.navbar-collapse
+                ul.navbar-nav
+                  
+                  li.nav-item
+                    a.nav-link(href='#home') Home _
+                  li.nav-item
+                    a.nav-link(href='#news') News _
+                  li.nav-item
+                    a.nav-link(href='#history') History _
+                  li.nav-item
+                    a.nav-link(href='#products') Products _
+                  li.nav-item
+                    a.nav-link(href='#contactus') Contact Us _
+                  
+              a.navbar-brand(href='#')
+                img.img-item.img-fluid(src='/img/logo.png',alt='',style="")
+              
+          
+      .row.website-main-block-video-pmp
+        .col-md-6.col-sm
+          img.title-img.img-fluid.rounded.mx-auto(src="/img/Video PMP.png")
+          p.intro-text
+            | ADisON 影音 PMP <br>
+            | 以創新吸睛的廣告格式抓住受眾目光 <br>
+            | 經由機器學習的演算法 <br>
+            | 精準的找到理想客群 <br>
+            | 並透過優質的流量幫助您有效的傳達品牌故事 <br>
+          
+          img.slogan(src="/img/slogan-1.png")
+        .col-md-6.col-sm-12
+          img.img-fluid.rounded.mx-auto(src="/img/KV.png")
+          img.A.img-fluid.rounded.mx-auto(src="/img/A (1).png")
+          
+
+  .website-main-container-content
+    
+    .row.website-main-block-news
+      a(name="about")
+      .container.d-flex.flex-column
+        .row.block-title
+          .col-8
+            #carouselNews.carousel.slide(data-ride='carousel')
+              .carousel-inner
+                .carousel-item.active
+                  img.d-block.w-100(src='', alt='First slide')
+                |               
+                .carousel-item
+                  img.d-block.w-100(src='', alt='Second slide')
+                |               
+                .carousel-item
+                  img.d-block.w-100(src='', alt='Third slide')
+              |             
+              a.carousel-control-prev(href='#carouselNews', role='button', data-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                |               
+                span.sr-only Previous
+              |             
+              a.carousel-control-next(href='#carouselNews', role='button', data-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                |               
+                span.sr-only Next
+
+          .col-4
+
+      //- .row.website-main-block-features-below-logo-with-slogan
+      //-   .item-info.item01.col-sm
+      //-     p 透過虛擬貨幣來刺激交易
+      //-   .item-info.item02.col-sm
+      //-     p 遊戲開發、賽事活動、選手培訓與模特藝人養成通證化
+      //-   .item-info.item04.col-sm
+      //-     p 限量活動、賽事票券交易
+
+    .website-main-block-history
+      .row
+        .col-1
+        .col-10
+          img.desktop.img-fluid.rounded.mx-auto(src="/img/群組 1-2.png")
+          img.mobile.img-fluid.rounded.mx-auto(src="/img/history-mobile.png")
+        .col-1
+          
+    .website-main-block-features-certification-eco
+      a(name="token")
+      .container.d-flex.flex-column
+        .row.block-title
+          .col-1
+          .col-9
+            h2.item-title
+              | 去中心化<span>應用平台主鏈</span>
+            br
+            p 開發者只要接上 JPLAY，就能讓產品直接接軌海量用戶、通用代幣、內容推廣、基礎系統API 等，直接進入 JPLAY 樂玩世界。
+          .col-1
+        .row.block-center
+          .col-sm-12.col-md
+            img.img-item.img-fluid(src='/img/16.png',alt='',style="")
+          //- .col-sm-12.col-md
+          //-   .card
+          //-     //- img.img-item.img-fluid(src='',alt='',style="height: 133px")
+          //-     .card-body
+          //-       h6.card-title 支持特定對象
+          //-       p.card-text
+          //-         | 支持者可以以 J token 認購通證來支持特定的廠商、團隊與名模等，協助他們渡過財務難關。
+          //- .col-sm-12.col-md
+          //-   .card
+          //-     //- img.img-item.img-fluid(src='',alt='',style="height: 133px")
+          //-     .card-body
+          //-       h6.card-title 自由買賣
+          //-       p.card-text
+          //-         | 通證就像是股票證券一樣具有投資價值，並可以在平台上以 J token 自由交易。
+          //- .col-sm
+          //-   .card
+          //-     //- img.img-item.img-fluid(src='',alt='',style="height: 133px")
+          //-     .card-body
+          //-       h6.card-title 兌換商品
+          //-       p.card-text
+          //-         | 投資者可以使用 J token 來兌換投資標的的產品或服務，例如虛寶、演唱會門票與私人午餐邀請等。
+
+    .row.website-main-block-features-trading-eco
+      a(name="ticket")
+      .container.d-flex.flex-column
+        .row.block-title
+          .col-2
+          .col-8
+            h2.item-title
+              | 四大基礎子鏈
+            br
+            h6 平台初期會優先開闢以下四類子鏈產品，作為後續子鏈可效法的對象應用：
+          .col-2
+        .row.block-center
+          .col-sm-12.col-md
+            .card
+              //- .img-item.img-fluid(style="height: 180px; background-color: #eee")
+              .card-body
+                h6.card-title 
+                  img.img-item.img-fluid(src='/img/17.png',alt='',style="")
+                p.card-text
+                  | 主播自由設計娛樂任務供玩家一起參與或競猜，大大增加電競的娛樂性。
+          .col-sm-12.col-md
+            .card
+              //- .img-item.img-fluid(style="height: 180px; background-color: #eee")
+              .card-body
+                h6.card-title 
+                  img.img-item.img-fluid(src='/img/18.png',alt='',style="")
+                p.card-text
+                  | 透過智能合約保障玩家權益並協助遊戲開發商開發新遊戲，達到玩家與開發商的雙贏局面。
+          .col-sm-12.col-md
+            .card
+              //- .img-item.img-fluid(style="height: 180px; background-color: #eee")
+              .card-body
+                h6.card-title
+                  img.img-item.img-fluid(src='/img/19.png',alt='',style="")
+                p.card-text
+                  | JPLAY 將與電競生活相關的實體廠商們合作，讓持有者可以直接用樂玩幣（JPT）做實體消費。
+          .col-sm
+            .card
+              //- .img-item.img-fluid(style="height: 180px; background-color: #eee")
+              .card-body
+                h6.card-title
+                  img.img-item.img-fluid(src='/img/20.png',alt='',style="")
+                p.card-text
+                  | 以樂玩幣（JPT）作為底層的通用貨幣，玩家可以自由交易不同遊戲的虛擬寶物。
+
+    //- .website-main-block-architecture
+    //-   .container.d-flex.flex-column
+    //-     a(name="architecture")
+    //-     .row.block-title
+    //-       .col-2
+    //-       .col-8
+    //-         h2.item-title
+    //-           | J token <span>架構</span>
+    //-         br
+    //-         h6.item-text 透過整合 J token ⽣態系的豐富資源，不僅⼤幅提升用戶線上的使用經驗與增進平台參與者間的互動，也將娛樂體驗拓展到線下，進而完善整個電競娛樂產業。
+    //-         img.img-fluid.mx-auto(src="/img/architecture.png")
+    //-       .col-2
+    
+    .website-main-block-timeline
+      .container.d-flex.flex-column
+        a(name="timeline")
+        .row.block-title
+          h2.item-title
+            | <span>JPLAY</span> 路線圖
+          br
+          h6.item-text
+        .row
+          .timeline-img
+
+    //- .website-main-block-token
+    //-   .container.d-flex.flex-column
+    //-     a(name="sale")
+    //-     .row.block-title
+    //-       .col-12
+    //-         h2.item-title
+    //-           | J token <span>銷售</span>（暫定）
+    //-         br
+    //-         h6.item-text
+    //-         img.img-fluid.rounded.mx-auto(src="/img/token.png")
+
+    .website-main-block-about-team
+      .container.d-flex.flex-column
+        a(name="team")
+        .row.block-title
+          //- .col-2
+          .col-12
+            h2.item-title
+              | JPLAY <span>合作夥伴</span>
+            br
+            h6.item-text
+          //- .col-2
+        .row.block-team
+          .col-sm-12.col-md
+            .card
+              //- .img-item.img-fluid(style="height: 180px; background-color: #eee")
+              .card-body
+                img.img-item.img-fluid(src='/img/21.png',alt='',style="")
+                h6.card-title 中國數碼文化（集團）有限公司
+                p.card-text
+                  | 集團以娛樂文化內容為核心，分為「體育電競」、「娛樂」與「文化地產」三大主營業務；業務相輔相成，提供完整、優質、便捷的一站式解決方案。
+          .col-sm-12.col-md
+            .card
+              //- .img-item.img-fluid(style="height: 180px; background-color: #eee")
+              .card-body
+                img.img-item.img-fluid(src='/img/22.png',alt='',style="")
+                h6.card-title Panforce 區塊鏈創意設計中心
+                p.card-text
+                  | Panforce 為一家替區塊鏈項目價值行銷的創意設計中心。Panforce 自詡為首席指揮家，藉由探索並洞悉眾力運行的機制，發揮每一位項目方的價值與潛力，一同在這區塊鏈舞台上譜出美麗樂章。
+          .col-sm-12.col-md
+            .card
+              //- .img-item.img-fluid(style="height: 180px; background-color: #eee")
+              .card-body
+                img.img-item.img-fluid(src='/img/23.png',alt='',style="")
+                h6.card-title AcXel
+                p.card-text
+                  | AcXel  為一家區塊鏈技術公司，除了提供區塊鏈技術顧問服務外，也藉由獨創的 AcXel 架構來為客戶快速地客製化其需求。
+          .col-sm-12.col-md
+            .card
+              //- .img-item.img-fluid(style="height: 180px; background-color: #eee")
+              .card-body
+                img.img-item.img-fluid(src='/img/24.png',alt='',style="")
+                h6.card-title Soocii
+                p.card-text
+                  | Soocii 為一個專為手遊玩家設計的「手遊直播社群平台」，突破以往直播手遊需要繁瑣的電腦連線設定， Soocii 用戶只需輕鬆一鍵即可隨時隨地分享遊戲實況。
+          //- .col-sm-12.col-md-6.col-lg-4
+          //-   .item-people
+          //-     .item-portrait
+          //-       img.img-fluid(src="/img/team-01.jpg")
+          //-     h6.item-name
+          //-       | 鄭志誠
+          //-     .item-position
+          //-       | 執行長
+          //-     .item-desc
+          //-       | 畢業於美國哥倫比亞大學商學院，擁有 CFA 證照，先後任職於 JP Morgan Chase 投資銀行總部、Rohm & Haas 併購部門、於智原科技 Faraday Technology 擔任發言人及策略投資主管。
+          //- .col-sm-12.col-md-6.col-lg-4
+          //-   .item-people
+          //-     .item-portrait
+          //-       img.img-fluid(src="/img/team-02.jpg")
+          //-     h6.item-name
+          //-       | 齊木努
+          //-     .item-position
+          //-       | 技術長
+          //-     .item-desc
+          //-       | 擁有豐富的技術經驗，先後為 Avex、Thomson Reuters Japan Ltd.、ReutersFirst Web、SAP China、Maize Co,. Ltd.、富士物流、Zoiccs Co,. Ltd. 與 XBRL 等公司提供軟體建構的服務。
+          //- .col-sm-12.col-md-6.col-lg-4
+          //-   .item-people
+          //-     .item-portrait
+          //-       img.img-fluid(src="/img/team-03.jpg")
+          //-     h6.item-name
+          //-       | 林彥文
+          //-     .item-position
+          //-       | 營運長
+          //-     .item-desc
+          //-       | 擁有超過12年的遊戲產業豐富資歷，像是負責經典線上遊戲「天堂」與「絕對武力CS Online」的營運、統籌知名大型電競賽事與擔任領隊的經驗。
+          //- .col-sm-12.col-md-6.col-lg-4
+          //-   .item-people
+          //-     .item-portrait
+          //-       img.img-fluid(src="/img/team-04.jpg")
+          //-     h6.item-name
+          //-       | 孫繼信
+          //-     .item-position
+          //-       | 行銷長
+          //-     .item-desc
+          //-       | 擁有超過二十年日本跨國企業管理經驗，擅長行銷管理。曾任日本上市公司 Prime System 營業部長一職。自 2010 年起，整合日本大型企業如歐姆龍、安川電機、歐力士等。
+          //- .col-sm-12.col-md-6.col-lg-4
+          //-   .item-people
+          //-     .item-portrait
+          //-       img.img-fluid(src="/img/team-05.jpg")
+          //-     h6.item-name
+          //-       | 莊正賢
+          //-     .item-position
+          //-       | 財務長
+          //-     .item-desc
+          //-       | 曾任職渣打銀行外匯交易部、萬寶投顧研究部、中央國際投信研究部、國際證券部，現任於萬寶週刊；為台灣唯一具有外資、投信和自營商完整投資經歷的總編輯。
+          //- .col-sm-12.col-md-6.col-lg-4
+          //-   .item-people
+          //-     .item-portrait
+          //-       img.img-fluid(src="/img/team-06.jpg")
+          //-     h6.item-name
+          //-       | Ronald B. Gamble
+          //-     .item-position
+          //-       | 顧問
+          //-     .item-desc
+          //-       | 資深工程師與策略顧問，先後參與了波音 747、767、777 與 787 系列飛機的綜合設計、製造、維修與維護等，善長於作業流程優化與產業發展分析。
+              
+    .website-main-block-footer
+      //- .container
+      //-   .row.d-flex
+      //-     .col-md.col-sm-12.block-logo
+      //-       a(href='#')
+      //-         img.img-item.img-fluid(src='/img/03.png',alt='',style="")
+      //-     .col-md.col-sm-12.block-nav
+      //-       nav.nav.flex-column.flex-sm-row
+      //-         a.flex-sm-fill.text-sm-center.nav-link(href='#about') 願景
+      //-         a.flex-sm-fill.text-sm-center.nav-link(href='#tranction') 特色
+      //-         //- a.flex-sm-fill.text-sm-center.nav-link(href='#architecture') 架構
+      //-         a.flex-sm-fill.text-sm-center.nav-link(href='#timeline') 路線圖
+      //-         //- a.flex-sm-fill.text-sm-center.nav-link(href='#sale') 銷售
+      //-         a.flex-sm-fill.text-sm-center.nav-link(href='#team') 合作夥伴
+      .d-flex
+        .block-copyright
+          div AUG 2018 | Copyright ® 2018 VMFIVE. All rights reserved.
+
+  
