@@ -12,10 +12,16 @@ $offset_top_overlap_news: 350px
 $offset_top_overlap_news_sm: 600px
 $offset_top_overlap_history: 12vw
 $offset_top_overlap_history_md: 65vw
+$offset_top_overlap_products: 12vw
+$offset_top_overlap_products_md: 65vw
+$offset_top_overlap_footer: 12vw
+$offset_top_overlap_footer_md: 65vw
 
 $zindex-website-main-container-header: 10
 $zindex-website-main-block-news: 9
 $zindex-website-main-block-history: 8
+$zindex-website-main-block-products: 7
+$zindex-website-main-block-footer: 6
 
 =centralizedFlexbox()
   display: flex
@@ -145,30 +151,13 @@ body
   img.slogan
     position: absolute
     left: 0
-    // +rwd-md((bottom: (-$offset_top_overlap_news)/2),(bottom: (-$offset_top_overlap_news_sm)/2))
-    transform: translateY(50%)
+    +rwd-md((bottom: (-$offset_top_overlap_news)/2),(bottom: (-$offset_top_overlap_news_sm)/2))
+    +rwd-md((transform: translateY(0%)),(transform: translateY(50%)))
   .A
     // right: -10vw
     max-height: 50vh
     +rwd-md((transform: translate(50%, 10%)),(transform: translate(40%, 10%)))
     +rwd-sm((transform: translate(40%, 10%)),(transform: translate(30%, 10%)))
-
-.website-main-block-features-below-logo-with-slogan
-  margin: 0
-  .item01
-    background-color: $color_cyan
-  .item02
-    background-color: $color_fuchsia
-  .item03
-    background-color: $color_orange
-  .item04
-    background-color: $color_grass
-  .item-info
-    text-align: center
-    +centralizedFlexbox()
-    padding: 7vw
-    color: #fff
-    font-size: 2rem
 
 .website-main-container-content
   margin: 0
@@ -181,6 +170,7 @@ body
   color: white
   margin: 0
 
+  position: relative
   z-index: $zindex-website-main-block-history
   +rwd-lg((margin-top: -$offset_top_overlap_history),(margin-top: -$offset_top_overlap_history_md))
   +rwd-lg((padding-top: $offset_top_overlap_history),(padding-top: $offset_top_overlap_history_md))
@@ -225,12 +215,42 @@ body
   .img-item
     margin: auto
 
-.website-main-block-features-certification-eco
+.website-main-block-products
   min-height: $default_screen_height
   // background: url('/img/09.jpg') no-repeat
-  background: white
   background-size: cover
-  color: black
+  color: white
+
+  position: relative
+  z-index: $zindex-website-main-block-products
+  +rwd-lg((margin-top: -$offset_top_overlap_products),(margin-top: -$offset_top_overlap_products_md))
+  +rwd-lg((padding-top: $offset_top_overlap_products),(padding-top: $offset_top_overlap_products_md))
+  min-height: $default_screen_height
+  +rwd-lg((min-height: 70vw),(min-height: 220vw))
+
+  background: url('/img/bg4.png') no-repeat
+  background-size: cover
+  background-position: center
+
+  img.slogan
+    position: absolute
+    left: 0
+    +rwd-lg((bottom: (-$offset_top_overlap_products)/2),(bottom: (-$offset_top_overlap_products_md)/2))
+    +rwd-lg((transform: translateY(0%)),(transform: translateY(50%)))
+
+  .intro-block
+    margin-top: 50%
+
+  #carouselProducts
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+
+  .title-img
+    width: 40%
+    right: 0
+  .intro-text
+    text-align: right
   .card
     height: 100%
     padding: 30px 0 30px 0
@@ -288,35 +308,6 @@ body
         min-height: 95px
         text-align: justify
 
-.website-main-block-features-sns-eco
-  margin: 0
-  min-height: $default_screen_height - 120
-  background: url('/img/10.jpg') no-repeat
-  background-size: cover
-  color: #fff
-  .block-title
-    margin-top: 130px
-    margin-bottom: 0
-    +centralizeSelfAndJustifyContent()
-    .item-title
-      span
-        color: $color_new_blue
-    h6
-      line-height: 2rem
-      color: white
-      text-align: left
-      max-width: 800px
-      margin-bottom: 40px
-  .card-sns
-    margin-top: 30px
-  .item-left
-    background: url('/img/02.jpg') no-repeat
-    background-size: cover
-    color: white
-  .item-right
-    background: white
-    color: black
-
 .website-main-block-news
   +rwd-md((padding-top: $offset_top_overlap_news),(padding-top: $offset_top_overlap_news_sm))
   z-index: $zindex-website-main-block-news
@@ -364,120 +355,6 @@ body
   .card-body
     padding: 0
 
-.website-main-block-about-platform
-  margin: 0
-  min-height: $default_screen_height
-  background: url('/img/12.jpg') no-repeat
-  background-size: cover
-  color: #fff
-  & > .container
-    align-items: center
-    justify-content: center
-  .item-info
-    width: 100%
-    text-align: left
-  .item-title
-    span
-      color: $color_orange
-  .item-text
-    margin-bottom: 1.5rem
-  #accordion
-    .btn-link
-      +linkNoUnderline(#fff)
-    .card, .card-body
-      background-color: rgba(0, 0, 0, .3)
-    .card-header
-      background-color: rgba(0, 0, 0, .6)
-    .collapse
-      background-color: rgba(0, 0, 0, .0)
-
-.website-main-block-architecture
-  min-height: 770px
-  background: white
-  .block-title
-    margin-top: 90px
-    margin-bottom: 0
-    +centralizeSelfAndJustifyContent()
-    .item-title
-      span
-        color: $color_new_blue
-    .item-text
-      line-height: 2
-
-.website-main-block-timeline
-  padding-bottom: 20px
-  .block-title
-    margin-top: 90px
-    margin-bottom: 0
-    +centralizeSelfAndJustifyContent()
-    .item-title
-      span
-        color: $color_new_blue
-  .timeline-img
-    background-image: url("/img/roadmap.png")
-    background-size: 100%
-    background-repeat: no-repeat
-    width: 100%
-    height: 0
-    padding-top: 63.77%
-
-.website-main-block-token
-  background: lightgray
-  padding-bottom: 100px
-  .block-title
-    margin-top: 90px
-    margin-bottom: 0
-    +centralizeSelfAndJustifyContent()
-    .item-title
-      span
-        color: $color_new_blue
-    .item-text
-      line-height: 2
-
-.website-main-block-about-team
-  background: $color_new_blue
-  color: white
-  margin: 0
-  min-height: $default_screen_height
-  .card
-    color: black
-    min-height: 100%
-    .card-title
-      color: $color_new_blue
-      min-height: 3rem
-    .card-body
-      text-align: justify
-  .block-title
-    min-width: 350px
-    margin-top: 90px
-    margin-bottom: 0
-    +centralizeSelfAndJustifyContent()
-    .item-title
-      span
-        color: white
-    .item-text
-      line-height: 2
-  .block-team
-    margin: 0
-    // padding: 50px
-  .item-people
-    min-height: 300px
-    padding: 30px
-    .item-portrait
-      +centralizedFlexbox()
-      height: 200px
-      width: 150px
-      margin: auto
-      border-radius: 5px
-    .item-name
-      margin-top: 10px
-      font-size: 1.5rem
-    .item-position
-      color: $color_orange
-    .item-desc
-      text-align: justify
-      padding-top: 10px
-
 .website-main-block-footer
   margin: 0
   min-height: 100px
@@ -486,6 +363,18 @@ body
   background-size: cover
   color: white
   +centralizedFlexbox()
+
+  position: relative
+  z-index: $zindex-website-main-block-footer
+  +rwd-lg((margin-top: -$offset_top_overlap_footer),(margin-top: -$offset_top_overlap_footer_md))
+  +rwd-lg((padding-top: $offset_top_overlap_footer),(padding-top: $offset_top_overlap_footer_md))
+  min-height: $default_screen_height
+  +rwd-lg((min-height: 70vw),(min-height: 220vw))
+
+  background: url('/img/bg5.png') no-repeat
+  background-size: cover
+  background-position: center
+
   .block-copyright
     justify-content: flex-start
     align-self: flex-start
