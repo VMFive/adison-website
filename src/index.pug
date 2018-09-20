@@ -53,17 +53,17 @@ body
       a(name="about")
       .container.d-flex.flex-column
         .row.block-title
-          .col-8
+          .col-12
             #carouselNews.carousel.slide(data-ride='carousel')
               .carousel-inner
                 .carousel-item.active
-                  img.d-block.w-100(src='', alt='First slide')
-                |               
-                .carousel-item
-                  img.d-block.w-100(src='', alt='Second slide')
-                |               
-                .carousel-item
-                  img.d-block.w-100(src='', alt='Third slide')
+                  img.img-portrait(src="/img/群組 4.png")
+                //- |               
+                //- .carousel-item
+                //-   img.d-block.w-100(src='', alt='Second slide')
+                //- |               
+                //- .carousel-item
+                //-   img.d-block.w-100(src='', alt='Third slide')
               |             
               a.carousel-control-prev(href='#carouselNews', role='button', data-slide='prev')
                 span.carousel-control-prev-icon(aria-hidden='true')
@@ -74,8 +74,10 @@ body
                 span.carousel-control-next-icon(aria-hidden='true')
                 |               
                 span.sr-only Next
-
-          .col-4
+        .row.block-title
+          .col-12
+            .intro-block
+              img.title-img.img-fluid.rounded.mx-auto(src="/img/News.png")
 
     .website-main-block-history
       .row
@@ -84,29 +86,37 @@ body
           img.desktop.img-fluid.rounded.mx-auto(src="/img/群組 1-2.png")
           img.mobile.img-fluid.rounded.mx-auto(src="/img/history-mobile.png")
         .col-1
+      .row
+        .col-12
+          .intro-block
+            img.title-img.img-fluid.rounded.mx-auto(src="/img/History.png")
+            p.intro-text
+              | 不斷創新的廣告格式讓您的廣告預算發揮最大價值 <br>
+              | 抓住消費者的目光 <br>
+              | 成功讓投放效果最佳化 <br>
           
     .website-main-block-products
       .row
-        .col-md-6.col-sm-12
+        .col-lg-6.col-12
           .intro-block
-            img.title-img.img-fluid.rounded.mx-auto(src="/img/Video PMP.png")
+            img.title-img.img-fluid.rounded.mx-auto(src="/img/Products.png")
             p.intro-text
               | 不斷創新的廣告格式讓您的廣告預算發揮最大價值 <br>
               | 抓住消費者的目光 <br>
               | 成功讓投放效果最佳化 <br>
           
           img.slogan(src="/img/slogan-1.png")
-        .col-md-6.col-sm-12
+        .col-lg-6.col-12
           #carouselProducts.carousel.slide(data-ride='carousel')
             .carousel-inner
               .carousel-item.active
-                img.d-block.w-100(src='', alt='First slide')
+                img.img-fluid(src='/img/carousel.png', alt='First slide')
               |               
               .carousel-item
-                img.d-block.w-100(src='', alt='Second slide')
+                img.img-fluid(src='/img/interstitial.png', alt='First slide')
               |               
               .carousel-item
-                img.d-block.w-100(src='', alt='Third slide')
+                img.img-fluid(src='/img/impressive.png', alt='First slide')
             |             
             a.carousel-control-prev(href='#carouselProducts', role='button', data-slide='prev')
               span.carousel-control-prev-icon(aria-hidden='true')

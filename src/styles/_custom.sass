@@ -8,14 +8,14 @@ $color_default: white
 
 $default_screen_height: 720px
 
-$offset_top_overlap_news: 350px
-$offset_top_overlap_news_sm: 600px
-$offset_top_overlap_history: 12vw
-$offset_top_overlap_history_md: 65vw
-$offset_top_overlap_products: 12vw
-$offset_top_overlap_products_md: 65vw
-$offset_top_overlap_footer: 12vw
-$offset_top_overlap_footer_md: 55vw
+$offset_top_overlap_news: 40vw
+$offset_top_overlap_news_md: 100vw
+$offset_top_overlap_history: 20vw
+$offset_top_overlap_history_md: 70vw
+$offset_top_overlap_products: 30vw
+$offset_top_overlap_products_md: 80vw
+$offset_top_overlap_footer: 30vw
+$offset_top_overlap_footer_md: 85vw
 
 $zindex-website-main-container-header: 10
 $zindex-website-main-block-news: 9
@@ -69,7 +69,7 @@ body
   position: relative
   z-index: $zindex-website-main-container-header
   min-height: $default_screen_height
-  +rwd-md((min-height: 800px),(min-height: 1400px))
+  +rwd-lg((min-height: 800px),(min-height: 110vw))
   background: url('/img/bg1.png') no-repeat
   background-size: cover
   background-position: center
@@ -144,7 +144,7 @@ body
     color: #fff
     font-size: 3.2rem
   .title-img
-    width: 40%
+    width: 20vw
     right: 0
     float: right
   .intro-text
@@ -153,8 +153,8 @@ body
   img.slogan
     position: absolute
     left: 0
-    +rwd-md((bottom: (-$offset_top_overlap_news)/2),(bottom: (-$offset_top_overlap_news_sm)/2))
-    +rwd-md((transform: translateY(0%)),(transform: translateY(50%)))
+    +rwd-lg((bottom: (-$offset_top_overlap_news)/2),(bottom: (-$offset_top_overlap_news_md)/2))
+    +rwd-lg((transform: translateY(0%)),(transform: translateY(50%)))
   .A
     // right: -10vw
     max-height: 50vh
@@ -163,7 +163,7 @@ body
 
 .website-main-container-content
   margin: 0
-  +rwd-md((margin-top: -$offset_top_overlap_news),(margin-top: -$offset_top_overlap_news_sm))
+  +rwd-lg((margin-top: -$offset_top_overlap_news),(margin-top: -$offset_top_overlap_news_md))
   text-align: center
   // background-color: white
 
@@ -175,9 +175,9 @@ body
   position: relative
   z-index: $zindex-website-main-block-history
   +rwd-lg((margin-top: -$offset_top_overlap_history),(margin-top: -$offset_top_overlap_history_md))
-  +rwd-lg((padding-top: $offset_top_overlap_history),(padding-top: $offset_top_overlap_history_md))
+  +rwd-lg((padding-top: $offset_top_overlap_history*2/3),(padding-top: $offset_top_overlap_history_md*2/3))
   min-height: $default_screen_height
-  +rwd-lg((min-height: 70vw),(min-height: 220vw))
+  +rwd-lg((min-height: 70vw),(min-height: 250vw))
 
   background: url('/img/bg3.png') no-repeat
   background-size: cover
@@ -190,7 +190,19 @@ body
     &.desktop
       +rwd-lg((display: block),(display: none))
 
-  text-align: center
+  .intro-block
+    float: right
+
+  .intro-text
+    clear: right
+    text-align: right
+
+  .title-img
+    width: 20vw
+    right: 0
+    float: right
+
+  // text-align: center
   .card
     height: 100%
     padding: 30px 0 30px 0
@@ -226,13 +238,14 @@ body
   position: relative
   z-index: $zindex-website-main-block-products
   +rwd-lg((margin-top: -$offset_top_overlap_products),(margin-top: -$offset_top_overlap_products_md))
-  +rwd-lg((padding-top: $offset_top_overlap_products),(padding-top: $offset_top_overlap_products_md))
+  +rwd-lg((padding-top: $offset_top_overlap_products),(padding-top: $offset_top_overlap_products_md/4))
   min-height: $default_screen_height
-  +rwd-lg((min-height: 70vw),(min-height: 220vw))
+  +rwd-lg((min-height: 100vw),(min-height: 300vw))
 
   background: url('/img/bg4.png') no-repeat
   background-size: cover
-  background-position: center
+  // +rwd-md((background-position: center),(background-position: 0% center))
+  background-position: 0% center
 
   img.slogan
     position: absolute
@@ -249,7 +262,7 @@ body
     transform: translate(-50%,-50%)
 
   .title-img
-    width: 40%
+    width: 20vw
     right: 0
     float: right
   .intro-text
@@ -313,16 +326,22 @@ body
         text-align: justify
 
 .website-main-block-news
-  +rwd-md((padding-top: $offset_top_overlap_news),(padding-top: $offset_top_overlap_news_sm))
+  +rwd-lg((padding-top: $offset_top_overlap_news*2/3),(padding-top: $offset_top_overlap_news_md*2/3))
   z-index: $zindex-website-main-block-news
   position: relative
   margin: 0
   min-height: $default_screen_height
-  +rwd-md((min-height: 60vw),(min-height: 220vw))
+  +rwd-lg((min-height: 90vw),(min-height: 220vw))
   background: url('/img/bg2 (1).png') no-repeat
   background-size: cover
   // background-position: center
-  +rwd-md((background-position: center),(background-position: 0% center))
+  // +rwd-md((background-position: center),(background-position: 0% center))
+  background-position: 0% center
+
+
+  .title-img
+    +rwd-lg((float: none),(float: right, margin: 20px))
+    width: 20vw
   .block-title
     margin-top: 60px
     margin-bottom: 0
@@ -381,6 +400,7 @@ body
 
   .title-img
     +rwd-lg((float: none),(float: right, margin: 20px))
+    width: 20vw
 
   hr
     color: white
