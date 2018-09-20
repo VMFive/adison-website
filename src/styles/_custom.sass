@@ -15,7 +15,7 @@ $offset_top_overlap_history_md: 65vw
 $offset_top_overlap_products: 12vw
 $offset_top_overlap_products_md: 65vw
 $offset_top_overlap_footer: 12vw
-$offset_top_overlap_footer_md: 65vw
+$offset_top_overlap_footer_md: 55vw
 
 $zindex-website-main-container-header: 10
 $zindex-website-main-block-news: 9
@@ -146,7 +146,9 @@ body
   .title-img
     width: 40%
     right: 0
+    float: right
   .intro-text
+    clear: right
     text-align: right
   img.slogan
     position: absolute
@@ -249,7 +251,9 @@ body
   .title-img
     width: 40%
     right: 0
+    float: right
   .intro-text
+    clear: right
     text-align: right
   .card
     height: 100%
@@ -362,22 +366,36 @@ body
   background: black
   background-size: cover
   color: white
-  +centralizedFlexbox()
+  // +centralizedFlexbox()
 
   position: relative
   z-index: $zindex-website-main-block-footer
   +rwd-lg((margin-top: -$offset_top_overlap_footer),(margin-top: -$offset_top_overlap_footer_md))
   +rwd-lg((padding-top: $offset_top_overlap_footer),(padding-top: $offset_top_overlap_footer_md))
-  min-height: $default_screen_height
-  +rwd-lg((min-height: 70vw),(min-height: 220vw))
+  // min-height: $default_screen_height
+  // +rwd-lg((min-height: 70vw),(min-height: 220vw))
 
   background: url('/img/bg5.png') no-repeat
   background-size: cover
   background-position: center
 
+  .title-img
+    +rwd-lg((float: none),(float: right, margin: 20px))
+
+  hr
+    color: white
+    border-color: white
+    background-color: white
+
+  .block-list
+    text-align: left
+    border-left: 6px solid white
+    +rwd-lg((margin: 0px 0px 0px 0px, padding: 0px),(margin: 30px, padding: 10px))
   .block-copyright
-    justify-content: flex-start
-    align-self: flex-start
+    margin: 20px 20px 20px 20px
+    float: left
+    // justify-content: flex-start
+    // align-self: flex-start
   .block-logo
     +centralizedFlexbox()
     flex-direction: column
