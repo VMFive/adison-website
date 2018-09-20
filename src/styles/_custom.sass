@@ -326,7 +326,7 @@ body
         text-align: justify
 
 .website-main-block-news
-  +rwd-lg((padding-top: $offset_top_overlap_news*2/3),(padding-top: $offset_top_overlap_news_md*2/3))
+  +rwd-lg((padding-top: $offset_top_overlap_news*2/3),(padding-top: $offset_top_overlap_news_md*3/3))
   z-index: $zindex-website-main-block-news
   position: relative
   margin: 0
@@ -338,7 +338,8 @@ body
   // +rwd-md((background-position: center),(background-position: 0% center))
   background-position: 0% center
 
-
+  .img-portrait
+    +rwd-lg((width: 20vw),(width: 50vw))
   .title-img
     +rwd-lg((float: none),(float: right, margin: 20px))
     width: 20vw
