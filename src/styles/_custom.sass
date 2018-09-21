@@ -153,8 +153,12 @@ body
   img.slogan
     position: absolute
     left: 0
-    +rwd-lg((bottom: (-$offset_top_overlap_news)/2),(bottom: (-$offset_top_overlap_news_md)/2))
-    +rwd-lg((transform: translateY(0%)),(transform: translateY(50%)))
+    +rwd-lg((bottom: ($offset_top_overlap_news)*1/3),(bottom: ($offset_top_overlap_news_md)*1/3))
+    +rwd-lg((transform: translateY(50%)),(transform: translateY(50%)))
+    &.mobile
+      +rwd-lg((display: none),(display: block))
+    &.desktop
+      +rwd-lg((display: block),(display: none))
   .A
     // right: -10vw
     max-height: 50vh
@@ -202,6 +206,12 @@ body
     right: 0
     float: right
 
+  img.slogan
+    position: absolute
+    left: 0
+    +rwd-lg((bottom: ($offset_top_overlap_products)*1/5),(bottom: ($offset_top_overlap_products_md)*1/5))
+    +rwd-lg((transform: translateY(50%)),(transform: translateY(50%)))
+
   // text-align: center
   .card
     height: 100%
@@ -246,12 +256,6 @@ body
   background-size: cover
   // +rwd-md((background-position: center),(background-position: 0% center))
   background-position: 0% center
-
-  img.slogan
-    position: absolute
-    left: 0
-    +rwd-lg((bottom: (-$offset_top_overlap_products)/2),(bottom: (-$offset_top_overlap_products_md)/2))
-    +rwd-lg((transform: translateY(0%)),(transform: translateY(50%)))
 
   .intro-block
     margin-top: 50%
