@@ -57,7 +57,7 @@ $zindex-website-main-block-footer: 6
 body
   color: $color_default
   background-color: $color_bg_default
-  font-family: "Futura-Medium"
+  font-family: "Futura-Medium", Roboto,Helvetica Neue,Helvetica,Arial,PingFang TC,黑體-繁,Heiti TC,蘋果儷中黑,Apple LiGothic Medium,微軟正黑體,Microsoft JhengHei,sans-serif
 
 .website-main-container
   position: static
@@ -261,6 +261,7 @@ body
     margin-top: 50%
 
   #carouselProducts
+    +rwd-lg((width: 30vw),(width: 80vw))
     bottom: 0
     left: 50%
     transform: translate(-50%, 0%)
@@ -403,7 +404,7 @@ body
   position: relative
   z-index: $zindex-website-main-block-footer
   +rwd-lg((margin-top: -$offset_top_overlap_footer),(margin-top: -$offset_top_overlap_footer_md))
-  +rwd-lg((padding-top: $offset_top_overlap_footer),(padding-top: $offset_top_overlap_footer_md))
+  +rwd-lg((padding-top: $offset_top_overlap_footer*4/5),(padding-top: $offset_top_overlap_footer_md*2/3))
   // min-height: $default_screen_height
   // +rwd-lg((min-height: 70vw),(min-height: 220vw))
 
@@ -423,7 +424,7 @@ body
   .block-list
     text-align: left
     border-left: 1px solid white
-    +rwd-lg((margin: 0px 0px 0px 0px, padding: 0px),(margin: 30px, padding: 10px))
+    +rwd-lg((margin: 0 0 0 0, padding: 0),(margin: 10px 30px 10px 30px, padding: 10px))
   .block-copyright
     margin: 20px 20px 20px 20px
     float: left
