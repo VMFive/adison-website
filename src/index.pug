@@ -50,6 +50,7 @@ body
   .website-main-container-content
     
     .row.website-main-block-news
+      img.img-fluid.title-img.rounded.mx-auto(src="/img/News.png")
       a(name="about")
       .container.d-flex.flex-column
         .row.block-title
@@ -57,7 +58,11 @@ body
             #carouselNews.carousel.slide(data-ride='carousel')
               .carousel-inner
                 .carousel-item.active
-                  img.img-fluid.img-portrait(src="/img/群組 4.png")
+                  .row
+                    .col-lg-6.col-12
+                      img.img-fluid.img-portrait(src="/img/群組 4.png")
+                    .col-lg-6.col-12
+                      .intro-text 透過創新廣告格式、優質流量和數據科學來協助廣告主達到超乎預期的行銷目標，透過創新廣告格式、優質流量和數據科學來協助廣告主達到超乎預期的行銷目標
                 //- |               
                 //- .carousel-item
                 //-   img.d-block.w-100(src='', alt='Second slide')
@@ -74,11 +79,6 @@ body
                 span.carousel-control-next-icon(aria-hidden='true')
                 |               
                 span.sr-only Next
-        .row.block-title
-          .col-lg-6.col-12
-          .col-lg-6.col-12
-            .intro-block
-              img.img-fluid.title-img.rounded.mx-auto(src="/img/News.png")
 
     .website-main-block-history
       .row

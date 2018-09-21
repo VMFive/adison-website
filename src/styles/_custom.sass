@@ -331,18 +331,26 @@ body
   position: relative
   margin: 0
   min-height: $default_screen_height
-  +rwd-lg((min-height: 90vw),(min-height: 220vw))
+  +rwd-lg((min-height: 90vw),(min-height: 240vw))
   background: url('/img/bg2 (1).png') no-repeat
   background-size: cover
   // background-position: center
   // +rwd-md((background-position: center),(background-position: 0% center))
   background-position: 0% center
 
+  .intro-text
+    +rwd-lg((padding: 0 0 0 0),(padding: 10vw))
+  #carouselNews
+    +rwd-lg((top: 10vw),(top: 5vw))
+
   .img-portrait
     +rwd-lg((width: 20vw),(width: 50vw))
   .title-img
     +rwd-lg((float: none),(float: right, margin: 20px))
     width: 20vw
+    position: absolute
+    right: 0
+    +rwd-lg((bottom: $offset_top_overlap_history),(bottom: $offset_top_overlap_history_md))
   .block-title
     margin-top: 60px
     margin-bottom: 0
