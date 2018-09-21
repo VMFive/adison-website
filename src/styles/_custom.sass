@@ -144,7 +144,7 @@ body
     color: #fff
     font-size: 3.2rem
   .title-img
-    width: 20vw
+    +rwd-lg((height: 5vw),(height: 15vw))
     right: 0
     float: right
   .intro-text
@@ -198,7 +198,7 @@ body
     text-align: right
 
   .title-img
-    width: 20vw
+    +rwd-lg((height: 5vw),(height: 15vw))
     right: 0
     float: right
 
@@ -257,12 +257,12 @@ body
     margin-top: 50%
 
   #carouselProducts
-    top: 50%
+    bottom: 0
     left: 50%
-    transform: translate(-50%,-50%)
+    transform: translate(-50%, 0%)
 
   .title-img
-    width: 20vw
+    +rwd-lg((height: 5vw),(height: 15vw))
     right: 0
     float: right
   .intro-text
@@ -339,7 +339,7 @@ body
   background-position: 0% center
 
   .intro-text
-    +rwd-lg((padding: 0 0 0 0),(padding: 10vw))
+    +rwd-lg((margin: 10vw),(margin: 0))
   #carouselNews
     +rwd-lg((top: 10vw),(top: 5vw))
 
@@ -347,7 +347,7 @@ body
     +rwd-lg((width: 20vw),(width: 50vw))
   .title-img
     +rwd-lg((float: none),(float: right, margin: 20px))
-    width: 20vw
+    +rwd-lg((height: 5vw),(height: 15vw))
     position: absolute
     right: 0
     +rwd-lg((bottom: $offset_top_overlap_history),(bottom: $offset_top_overlap_history_md))
@@ -409,7 +409,7 @@ body
 
   .title-img
     +rwd-lg((float: none),(float: right, margin: 20px))
-    width: 20vw
+    +rwd-lg((height: 5vw),(height: 15vw))
 
   hr
     color: white
@@ -418,7 +418,7 @@ body
 
   .block-list
     text-align: left
-    border-left: 6px solid white
+    border-left: 1px solid white
     +rwd-lg((margin: 0px 0px 0px 0px, padding: 0px),(margin: 30px, padding: 10px))
   .block-copyright
     margin: 20px 20px 20px 20px
