@@ -225,7 +225,7 @@ html, body {
   /*  */
 }
 .block-adison .row > div {
-  padding: 0;
+  /* padding: 0; */
 }
 
 .block-features .row > div {
@@ -234,15 +234,30 @@ html, body {
 
 .block-header.title {
   text-align: start;
+  position: relative;
+  margin: 15vh 0 15vh 0;
+}
+@media screen and (min-width: 720px) {
+  .block-header.title {
+    margin: 0;
+  }
 }
 
 .block-header .block-square {
   position: relative;
-  padding-top: 1 * 100%;
 
-  /* height: 0; */
   min-width: 250px;
+  min-height: 250px;
   overflow: hidden;
+
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .block-header.title > img {
@@ -250,12 +265,6 @@ html, body {
 }
 
 .block-header .block-square > .inner {
-  position: absolute;
-
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -263,10 +272,7 @@ html, body {
   justify-content: center;
 
   min-height: 100px;
-  width: 100%;
-  border-style: solid;
-  border-width: 2px;
-  border-color: white;
+  /* width: 100%; */
 
 }
 
@@ -277,6 +283,16 @@ html, body {
   width: auto;
   height: auto;
   transform: translate(-50%,-50%);
+}
+.block-header .block-square > .inner {
+  font-family: "futura medium bt", Sans-serif;
+  letter-spacing: 3.6px;
+}
+.block-header .block-square > .inner h1 {
+  font-size: 60px;
+}
+.block-header .block-square > .inner h2 {
+  font-size: 42px;
 }
 
 .block-header.title {
@@ -310,6 +326,13 @@ html, body {
   justify-content: flex-start;
 
   text-align: left;
+}
+
+.block-dmp {
+
+}
+.block-dmp .feature-box > img {
+  padding: 18%;
 }
 
 .block-circle {

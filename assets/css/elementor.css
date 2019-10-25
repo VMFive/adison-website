@@ -1,8 +1,16 @@
+@font-face { font-family:DINPro;src:url(https://adison.com.tw/wp-content/uploads/2019/07/DINPro.woff) format('woff2');font-display: swap;}@font-face { font-family:futura bold italic font;src:url(https://adison.com.tw/wp-content/uploads/2018/12/futura-bold-italic-font.ttf) format('woff2');font-display: swap;}@font-face { font-family:DINPro-Black;src:url(https://adison.com.tw/wp-content/uploads/2018/12/DINPro-Black.woff) format('woff2');font-display: swap;}@font-face { font-family:futura light bt;src:url(https://adison.com.tw/wp-content/uploads/2018/12/futura-light-bt.ttf) format('woff2');font-display: swap;}@font-face { font-family:DINPro-Bold;src:url(https://adison.com.tw/wp-content/uploads/2018/12/DINPro-Bold.woff) format('woff2');font-display: swap;}@font-face { font-family:futura medium bt;src:url(https://adison.com.tw/wp-content/uploads/2018/12/futura-medium-bt.ttf) format('woff2');font-display: swap;}@font-face { font-family:DINPro-Cond;src:url(https://adison.com.tw/wp-content/uploads/2018/12/DINPro-Cond.woff) format('woff2');font-display: swap;}@font-face { font-family:futura medium condensed bt;src:url(https://adison.com.tw/wp-content/uploads/2018/12/futura-medium-condensed-bt.ttf) format('woff2');font-display: swap;}@font-face { font-family:DINPro-CondBold;src:url(https://adison.com.tw/wp-content/uploads/2018/12/DINPro-CondBold.woff) format('woff2');font-display: swap;}@font-face { font-family:futura xblk bt;src:url(https://adison.com.tw/wp-content/uploads/2018/12/futura-xblk-bt.ttf) format('woff2');font-display: swap;}@font-face { font-family:DINPro-Light;src:url(https://adison.com.tw/wp-content/uploads/2018/12/DINPro-Light.woff) format('woff2');font-display: swap;}@font-face { font-family:futura;src:url(https://adison.com.tw/wp-content/uploads/2018/12/futura.ttf) format('woff2');font-display: swap;}@font-face { font-family:DINPro-Medium;src:url(https://adison.com.tw/wp-content/uploads/2018/12/DINPro-Medium.woff) format('woff2');font-display: swap;}@font-face { font-family:futura bold font;src:url(https://adison.com.tw/wp-content/uploads/2018/12/futura-bold-font.ttf) format('woff2');font-display: swap;}
 
 @charset "UTF-8";
 .ee-image-comparison__label.is--hidden,
 .timeline-item.is--hidden {
 	visibility: hidden
+}
+
+.elementor-divider-separator {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #ffffff;
+    width: 90%;
 }
 
 .ee-grid-align--stretch .ee-gallery .ee-media__thumbnail img,
