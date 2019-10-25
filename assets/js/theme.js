@@ -25,7 +25,7 @@ var slideDemo = new Siema({
   onChange: () => {},
 });
 
-let videos = {
+let demoMapping = {
   "Motion-Ads":"https://adison.com.tw/wp-content/uploads/2018/12/1.軸感互動（食品）：麥當勞搖搖雞球_edit改.mp4",
   "Dynamic-Interstitial":"https://adison.com.tw/wp-content/uploads/2018/12/2.動態蓋板（食品）：肯德基_edit改.mp4",
   "Dynamic-In-Read-Ads":"https://adison.com.tw/wp-content/uploads/2018/12/3.動態文中：Swift_edit改.mp4",
@@ -37,3 +37,7 @@ let videos = {
   "Native-Ads":"https://adison.com.tw/wp-content/uploads/2018/12/9.原生：Uniqlo_edit改.mp4",
   "Top-Ads":"https://adison.com.tw/wp-content/uploads/2018/12/10.原生Top（音樂）：環球泰勒絲_edit改.mp4",
 }
+
+$(".block-demo-show").on('click', e => {
+  $('video.ee-video-player__source').attr('src', demoMapping[e.currentTarget.dataset.key])
+})
