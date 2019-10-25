@@ -41,8 +41,8 @@ let demoMapping = {
 $(".block-demo-show").on('click', e => {
   let data = demoMapping[e.currentTarget.dataset.key]
   $('video.ee-video-player__source').attr('src', data.url)
-  $('.section-demo .title').html(data.title)
-  $('.section-demo .subtitle').html(data.subtitle)
-  $('.section-demo .description').html(data.description)
+  $('.block-demo .title').html(data.title)
+  $('.block-demo .subtitle').html(data.subtitle)
+  $('.block-demo .description').html(data.description)
 
 })

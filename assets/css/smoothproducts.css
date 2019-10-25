@@ -221,11 +221,9 @@ html, body {
   min-height: 100%;
 }
 
-.block-adison {
-  /*  */
-}
-.block-adison .row > div {
-  /* padding: 0; */
+.block-adison, .block-network, .block-flow,
+.block-demo, .block-5r, .block-dmp {
+  padding-top: 50px;
 }
 
 .block-features .row > div {
@@ -287,12 +285,13 @@ html, body {
 .block-header .block-square > .inner {
   font-family: "futura medium bt", Sans-serif;
   letter-spacing: 3.6px;
+  text-align: center;
 }
 .block-header .block-square > .inner h1 {
   font-size: 60px;
 }
 .block-header .block-square > .inner h2 {
-  font-size: 42px;
+  font-size: 35px;
 }
 
 .block-header.title {
@@ -421,6 +420,14 @@ html, body {
   transform: translate(50%, -50%);
 }
 
+.block-awards {
+  padding-top: 200px;
+}
+.block-awards .top-right {
+  top: 100px;
+  right: -15px;
+}
+
 .p-relative {
   position: relative;
 }
@@ -428,6 +435,15 @@ html, body {
 .p-absolute-bottom {
   position: absolute;
   bottom: 0;
+}
+
+.colmobilefixup {
+  padding: 0 8% 0 8%;
+}
+@media screen and (min-width: 720px) {
+  .colmobilefixup {
+    padding: 0;
+  }
 }
 
 section {
