@@ -1,6 +1,9 @@
 html, body {
   height: 100%;
   width: 100%;
+
+  font-family: 'PingFang TC', "Microsoft JhengHei", Arial, sans-serif;
+  color: #3a3a3a;
 }
 
 .sp-loading {
@@ -226,6 +229,15 @@ html, body {
   padding-top: 50px;
 }
 
+.block-5r .block-about-more {
+  margin-top: 35px;
+}
+@media screen and (min-width: 720px) {
+  .block-5r .block-about-more {
+    margin-top: 0;
+  }
+}
+
 .block-features .row > div {
   padding: 0;
 }
@@ -327,11 +339,25 @@ html, body {
   text-align: left;
 }
 
+.block-heading, .block-section-title {
+  color: #727272;
+  font-family: "futura medium bt", Sans-serif;
+}
+
 .block-dmp {
 
 }
-.block-dmp .feature-box > img {
+.block-dmp .block-feature-cards img {
   padding: 18%;
+}
+.block-dmp .block-feature-cards h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.block-dmp .block-feature-cards p {
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
 }
 
 .block-circle {
