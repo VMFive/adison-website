@@ -24,6 +24,12 @@ let demoMapping = {
   // "Dynamic-Carousel-Ads":{title:"動態輪播廣告 Dynamic + Carousel Ads",subtitle:"廣告訊息發揮淋漓盡致",description:"集結影音、靜態多元素材，讓廣告主充分利用一則廣告傳遞豐富訊息，搭配動態 LBS 行動定位服務 O2O 整合行銷增加用戶互動(除地理位置外，還可客製天氣、時間資訊)。",url:"https://adison.com.tw/wp-content/uploads/2019/11/Carousel-Demo.mp4",icon:"https://adison.com.tw/wp-content/uploads/2019/11/adison_officalsite_icon_carousel_dynamic.png",},
   // "Native-Ads":{title:"原生廣告 Native Ads",subtitle:"極佳的觀看體驗與成效",description:"廣告自然的融入在網頁的靜態文章段落中或文末，因閱讀過程比較不會打擾用戶，所以觀看率 (VTR) 極高。",url:"https://adison.com.tw/wp-content/uploads/2019/11/Native-Ads-Demo.mp4",icon:"https://adison.com.tw/wp-content/uploads/2019/11/format_icon_native.png",},
   // "Impressive-Ads":{title:"滾動式蓋版廣告 Impressive Ads",subtitle:"吸睛低干擾大版位廣告",description:"廣告位於內文中，隨用戶滑動慢慢出現至全版（影音可鑲於上方、中間或下方，搭配靜態 banner），用戶更專注在廣告內容。",url:"https://adison.com.tw/wp-content/uploads/2019/11/Impressive-Ads-Demo.mp4",icon:"https://adison.com.tw/wp-content/uploads/2019/11/format_icon_impressive.png",},
+
+  // // Old
+  "Native-Flip-Ads":{title:"原生翻轉廣告 Native Flip Ads",subtitle:"翻轉出場瞬間吸引目光",description:"原生廣告自然的融入在網頁的靜態文章段落中，當廣告經滑動至螢幕中央時，即以翻轉的展演形式吸引用戶注目。",url:"https://adison.com.tw/wp-content/uploads/2018/12/8.原生翻轉Banner（電影）：分秒幣爭_edit改.mp4",icon:"https://adison.com.tw/wp-content/uploads/2019/11/format_icon_native_flip.png",},
+  "Dynamic-In-Read-Ads":{title:"動態文中廣告 Dynamic-In-Read Ads",subtitle:"個人化互動式廣告內容",description:"原生廣告結合如：天氣（溫度、濕度、PM2.5）、時間、地理位置資訊，讓廣告訊息個人化且更容易抓住目光。",url:"https://adison.com.tw/wp-content/uploads/2018/12/3.動態文中：Swift_edit改.mp4",icon:"https://adison.com.tw/wp-content/uploads/2019/11/adison_officalsite_icon_native_dynamic.png",},
+  "Native-Ads":{title:"原生廣告 Native Ads",subtitle:"極佳的觀看體驗與成效",description:"廣告自然的融入在網頁的靜態文章段落中或文末，因閱讀過程比較不會打擾用戶，所以觀看率 (VTR) 極高。",url:"https://adison.com.tw/wp-content/uploads/2018/12/9.原生：Uniqlo_edit改.mp4",icon:"https://adison.com.tw/wp-content/uploads/2019/11/format_icon_native.png",},
+  "Impressive-Ads":{title:"滾動式蓋版廣告 Impressive Ads",subtitle:"吸睛低干擾大版位廣告",description:"廣告位於內文中，隨用戶滑動慢慢出現至全版（影音可鑲於上方、中間或下方，搭配靜態 banner），用戶更專注在廣告內容。",url:"https://adison.com.tw/wp-content/uploads/2018/12/5.滾動式：溫徹斯特鬼屋_edit改.mp4",icon:"https://adison.com.tw/wp-content/uploads/2019/11/format_icon_impressive.png",},
 }
 
 let adsIconContainer = document.querySelector('.block-demo .siema')
